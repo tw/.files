@@ -1,0 +1,8 @@
+Install XCode
+
+Install Brew
+	brew install python
+	brew install irssi
+	brew install vim --HEAD
+
+Install RVM
