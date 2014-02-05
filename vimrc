@@ -31,6 +31,7 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'nvie/vim-flake8'
 " Syntax
 NeoBundle 'evidens/vim-twig'
+NeoBundle 'tw/vim-ruby'
 " Colours
 NeoBundle 'vim-scripts/summerfruit256.vim'
 NeoBundle 'therubymug/vim-pyte'
