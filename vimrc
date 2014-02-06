@@ -111,7 +111,7 @@ endif
 
 set background=dark
 let g:rehash256 = 1
-colorscheme molokai
+colorscheme Tomorrow-Night-Eighties
 
 """""""""""""""
 """ Keymaps
