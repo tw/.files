@@ -3,7 +3,7 @@ servers = (
 );
 
 chatnets = {
-  Rizon = {
+  Rizon = { 
     type = "IRC";
     max_kicks = "1";
     max_msgs = "3";
