@@ -3,7 +3,7 @@ servers = (
 );
 
 chatnets = {
-  Rizon = { 
+  Rizon = {
     type = "IRC";
     max_kicks = "1";
     max_msgs = "3";
@@ -188,11 +188,12 @@ settings = {
     nick = "tcw";
   };
   "fe-text" = { actlist_sort = "refnum"; };
-  "fe-common/core" = { theme = "mrooveq.theme"; };
+  "fe-common/core" = { theme = "solarized.theme"; };
   "perl/core/scripts" = {
     awl_block = "1";
-    awl_display_key = "$Q%K|$N%n $H$C$S";
-    awl_display_key_active = "$Q%K|$N%n $H%U$C%n$S";
-    awl_display_nokey = "[$N]$H$C$S";
+    awl_display_key_active = "%k%2[$Q=$N:$C]%n";
+    awl_display_nokey_active = "%k%2[$N:$C]%n";
+    awl_display_key = "[$Q:$H$C$S]";
+    awl_display_nokey = "[$N:$H$C$S]";
   };
 };
