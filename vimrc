@@ -14,7 +14,6 @@ NeoBundle 'Shougo/unite-outline'
 
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'hdima/python-syntax'
@@ -33,6 +32,7 @@ NeoBundle 'nvie/vim-flake8'
 NeoBundle 'evidens/vim-twig'
 NeoBundle 'tw/vim-ruby'
 " Colours
+NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'vim-scripts/summerfruit256.vim'
 NeoBundle 'therubymug/vim-pyte'
 NeoBundle 'davidkariuki/sexy-railscasts-256-theme'
@@ -110,8 +110,8 @@ if has('gui_running')
 endif
 
 set background=dark
-let g:rehash256 = 1
-colorscheme Tomorrow-Night-Eighties
+"colorscheme Tomorrow-Night-Eighties
+colorscheme solarized
 
 """""""""""""""
 """ Keymaps
@@ -156,7 +156,11 @@ let g:gist_open_browser_after_post = 1
 let g:gist_post_private = 1
 let NERDTreeIgnore = ['\.pyc$']
 
+" Airline
 let g:airline_right_sep=''
 let g:airline_left_sep=''
 let g:airline_fugitive_prefix = ''
 let g:airline_theme = 'light'
+
+" Solarized
+hi! link rubyDefine rubyInclude
