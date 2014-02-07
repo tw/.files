@@ -110,8 +110,8 @@ if has('gui_running')
 endif
 
 set background=dark
-"colorscheme Tomorrow-Night-Eighties
-colorscheme solarized
+colorscheme Tomorrow-Night-Eighties
+"colorscheme solarized
 
 """""""""""""""
 """ Keymaps
@@ -161,6 +161,3 @@ let g:airline_right_sep=''
 let g:airline_left_sep=''
 let g:airline_fugitive_prefix = ''
 let g:airline_theme = 'light'
-
-" Solarized
-hi! link rubyDefine rubyInclude
