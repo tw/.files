@@ -12,9 +12,13 @@ shopt -s histappend
 for file in $HOME/code/dotfiles/completion/*; do source $file && unset file; done
 
 # Paths
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.rvm/bin:$PATH
-export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH
+export WORKON_HOME=$HOME/.virtualenvs
+
+test -f /usr/local/bin/virtualenvwrapper.sh && . /usr/local/bin/virtualenvwrapper.sh
 
 # Folder Colouring
 export CLICOLOR=1
@@ -35,4 +39,4 @@ RESET="\033[m"
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 
-PS1="\[$PURPLE\]\u\[$WHITE\]:\[$GREEN\]\w\[$CYAN\]\$(__git_ps1)\$ \[$RESET\]"
+PS1="\[$PURPLE\]\u\[$WHITE\]:\[$RED\]\w\[$CYAN\]\$(__git_ps1)\$ \[$RESET\]"

@@ -1,0 +1,17 @@
+[user]
+    email = tobie.warburton@gmail.com
+    name = Tobie Warburton
+[color]
+    ui = auto
+[core]
+    editor = vim
+    filemode = false
+	excludesfile = /Users/tcw/.gitignore
+[alias]
+    co = checkout # "!c() { git checkout ${1:-master}; }; c" # checkout
+    br = branch
+    st = status
+    cm = commit
+    pub = "!f() { git push -u ${1:-origin} `git symbolic-ref HEAD`; }; f"
+[github]
+    user = tw

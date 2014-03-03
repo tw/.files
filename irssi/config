@@ -188,7 +188,7 @@ settings = {
     nick = "tcw";
   };
   "fe-text" = { actlist_sort = "refnum"; };
-  "fe-common/core" = { theme = "solarized.theme"; };
+  "fe-common/core" = { theme = "default.theme"; };
   "perl/core/scripts" = {
     awl_block = "1";
     awl_display_key_active = "%k%2[$Q=$N:$C]%n";

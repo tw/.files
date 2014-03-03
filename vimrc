@@ -12,29 +12,34 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
 
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'bling/vim-airline'
+" Files
 NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'hdima/python-syntax'
-NeoBundle 'bitc/vim-bad-whitespace'
-NeoBundle 'derekwyatt/vim-scala'
-NeoBundle 'hynek/vim-python-pep8-indent'
 NeoBundle 'scrooloose/nerdtree'
+
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'bitc/vim-bad-whitespace'
+NeoBundle 'hynek/vim-python-pep8-indent'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
+" Movement
+NeoBundle 'justinmk/vim-sneak'
+" Surround and Repeat
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-repeat'
 " Completion
 NeoBundle 'Valloric/YouCompleteMe'
 " Git Gutter
 NeoBundle 'airblade/vim-gitgutter'
+" Python
 NeoBundle 'nvie/vim-flake8'
 " Syntax
+NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'evidens/vim-twig'
+NeoBundle 'hdima/python-syntax'
 NeoBundle 'tw/vim-ruby'
 " Colours
-NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'vim-scripts/summerfruit256.vim'
-NeoBundle 'therubymug/vim-pyte'
 NeoBundle 'davidkariuki/sexy-railscasts-256-theme'
 NeoBundle 'jnurmine/Zenburn'
 NeoBundle 'chriskempson/tomorrow-theme', { 'rtp': 'vim/' }
@@ -44,6 +49,7 @@ NeoBundle 'vim-scripts/django.vim'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'vim-scripts/twilight256.vim'
 NeoBundle '29decibel/codeschool-vim-theme'
+NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'tpope/vim-vividchalk'
 
 set t_Co=256
@@ -100,9 +106,11 @@ let g:ruby_path = system('rvm current')
 au FileType javascript setl sw=2 sts=2 et
 au FileType twig setl sw=2 sts=2 et
 au FileType ruby setl sw=2 sts=2 et
-au FileType html setl sw=2 sts=2 et ft=twig
+au FileType less setl sw=2 sts=2 et
+au FileType html setl sw=2 sts=2 et
 
 let python_highlight_all = 1 " python highlight all
+let ruby_operators = 1
 
 " Pretty
 if has('gui_running')
@@ -110,8 +118,9 @@ if has('gui_running')
 endif
 
 set background=dark
-colorscheme Tomorrow-Night-Eighties
-"colorscheme solarized
+let g:rehash256=1
+
+colorscheme jellybeans
 
 """""""""""""""
 """ Keymaps
@@ -154,7 +163,7 @@ nnoremap <silent> <leader>o :<C-u>Unite -buffer-name=outline -vertical outline<C
 
 let g:gist_open_browser_after_post = 1
 let g:gist_post_private = 1
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', '_site']
 
 " Airline
 let g:airline_right_sep=''
