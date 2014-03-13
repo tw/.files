@@ -39,4 +39,4 @@ RESET="\033[m"
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 
-PS1="\[$PURPLE\]\u\[$WHITE\]:\[$RED\]\w\[$CYAN\]\$(__git_ps1)\$ \[$RESET\]"
+PS1="\[$GREEN\]\u\[$WHITE\]:\[$RED\]\w\[$CYAN\]\$(__git_ps1)\$ \[$RESET\]"
