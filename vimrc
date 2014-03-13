@@ -33,24 +33,22 @@ NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'airblade/vim-gitgutter'
 " Python
 NeoBundle 'nvie/vim-flake8'
+" Ruby
+NeoBundle 'thoughtbot/vim-rspec'
 " Syntax
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'evidens/vim-twig'
 NeoBundle 'hdima/python-syntax'
 NeoBundle 'tw/vim-ruby'
-" Colours
-NeoBundle 'vim-scripts/summerfruit256.vim'
-NeoBundle 'davidkariuki/sexy-railscasts-256-theme'
-NeoBundle 'jnurmine/Zenburn'
-NeoBundle 'chriskempson/tomorrow-theme', { 'rtp': 'vim/' }
-NeoBundle 'junegunn/seoul256.vim'
-NeoBundle 'tomasr/molokai'
 NeoBundle 'vim-scripts/django.vim'
 NeoBundle 'groenewege/vim-less'
-NeoBundle 'vim-scripts/twilight256.vim'
-NeoBundle '29decibel/codeschool-vim-theme'
-NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'tpope/vim-vividchalk'
+" Colours
+NeoBundle 'vim-scripts/summerfruit256.vim'
+NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'morhetz/gruvbox'
+NeoBundle 'tomasr/molokai'
+" Zen Mode
+NeoBundle 'junegunn/goyo.vim'
 
 set t_Co=256
 
@@ -106,6 +104,7 @@ let g:ruby_path = system('rvm current')
 au FileType javascript setl sw=2 sts=2 et
 au FileType twig setl sw=2 sts=2 et
 au FileType ruby setl sw=2 sts=2 et
+au FileType yaml setl sw=2 sts=2 et
 au FileType less setl sw=2 sts=2 et
 au FileType html setl sw=2 sts=2 et
 
@@ -118,9 +117,8 @@ if has('gui_running')
 endif
 
 set background=dark
-let g:rehash256=1
 
-colorscheme jellybeans
+colorscheme gruvbox
 
 """""""""""""""
 """ Keymaps
@@ -150,6 +148,13 @@ map <S-l> <C-W>>
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 " U redo since u undos
 nnoremap U <c-r>
+
+" Zen Mode
+nnoremap <Leader>z :Goyo<CR>
+
+" Rspec
+map <Leader>a :call RunAllSpecs()<CR>
+map <Leader>c :call RunCurrentSpecFile()<CR>
 
 """""""""""""""""""
 """ Plugin Settings
