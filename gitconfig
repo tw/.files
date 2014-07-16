@@ -6,7 +6,7 @@
 [core]
     editor = vim
     filemode = false
-	excludesfile = /Users/tcw/.gitignore
+	excludesfile = ~/.gitignore
 [alias]
     co = checkout # "!c() { git checkout ${1:-master}; }; c" # checkout
     br = branch
