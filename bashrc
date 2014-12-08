@@ -8,6 +8,12 @@ TERM=screen-256color
 shopt -s checkwinsize
 shopt -s histappend
 
+HISTFILESIZE=1000000
+HISTSIZE=1000000
+HISTCONTROL=ignoreboth
+PROMPT_COMMAND='history -a'
+
+
 # Source Completion files
 for file in $HOME/code/dotfiles/completion/*; do source $file && unset file; done
 
@@ -18,6 +24,7 @@ export JAVA_OPTS="-XX:-UseSplitVerifier"
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/.rvm/bin:$PATH
 export PATH=$HOME/.bin:$PATH
+export PATH=/usr/local/sbin:$PATH
 export WORKON_HOME=$HOME/.virtualenvs
 
 test -f /usr/local/bin/virtualenvwrapper.sh && . /usr/local/bin/virtualenvwrapper.sh

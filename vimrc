@@ -1,4 +1,5 @@
 set nocompatible " Be iMproved
+set shell=bash
 
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
@@ -36,12 +37,14 @@ NeoBundle 'nvie/vim-flake8'
 " Ruby
 NeoBundle 'thoughtbot/vim-rspec'
 " Syntax
-NeoBundle 'derekwyatt/vim-scala'
-NeoBundle 'evidens/vim-twig'
-NeoBundle 'hdima/python-syntax'
-NeoBundle 'tw/vim-ruby'
-NeoBundle 'vim-scripts/django.vim'
-NeoBundle 'groenewege/vim-less'
+" NeoBundle 'derekwyatt/vim-scala'
+" NeoBundle 'evidens/vim-twig'
+" NeoBundle 'hdima/python-syntax'
+" NeoBundle 'tw/vim-ruby'
+" NeoBundle 'vim-scripts/django.vim'
+" NeoBundle 'groenewege/vim-less'
+
+NeoBundle 'sheerun/vim-polyglot'
 " Colours
 NeoBundle 'vim-scripts/summerfruit256.vim'
 NeoBundle 'chriskempson/base16-vim'
@@ -49,6 +52,8 @@ NeoBundle 'morhetz/gruvbox'
 NeoBundle 'tomasr/molokai'
 " Zen Mode
 NeoBundle 'junegunn/goyo.vim'
+
+NeoBundle 'Shutnik/jshint2.vim'
 
 set t_Co=256
 
@@ -155,6 +160,8 @@ nnoremap <Leader>z :Goyo<CR>
 " Rspec
 map <Leader>a :call RunAllSpecs()<CR>
 map <Leader>c :call RunCurrentSpecFile()<CR>
+
+map <Leader>j :JSHint<CR>
 
 """""""""""""""""""
 """ Plugin Settings

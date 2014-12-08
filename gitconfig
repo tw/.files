@@ -7,11 +7,13 @@
     editor = vim
     filemode = false
 	excludesfile = ~/.gitignore
+	autocrlf = input
 [alias]
     co = checkout # "!c() { git checkout ${1:-master}; }; c" # checkout
     br = branch
     st = status
     cm = commit
     pub = "!f() { git push -u ${1:-origin} `git symbolic-ref HEAD`; }; f"
+    clean-branches = "!f() { git branch -a --merged master | grep -v 'remotes/' | grep -v '*' | tr -d ' ' | xargs git branch -d; }; f"
 [github]
     user = tw
