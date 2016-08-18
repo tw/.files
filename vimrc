@@ -5,18 +5,18 @@ if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 " Unite
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
-
+" Autocomplete
+NeoBundle 'Valloric/YouCompleteMe'
 " Files
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/nerdtree'
-
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'bitc/vim-bad-whitespace'
@@ -28,8 +28,6 @@ NeoBundle 'justinmk/vim-sneak'
 " Surround and Repeat
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-repeat'
-" Completion
-NeoBundle 'Valloric/YouCompleteMe'
 " Git Gutter
 NeoBundle 'airblade/vim-gitgutter'
 " Python
@@ -37,23 +35,14 @@ NeoBundle 'nvie/vim-flake8'
 " Ruby
 NeoBundle 'thoughtbot/vim-rspec'
 " Syntax
-" NeoBundle 'derekwyatt/vim-scala'
-" NeoBundle 'evidens/vim-twig'
-" NeoBundle 'hdima/python-syntax'
-" NeoBundle 'tw/vim-ruby'
-" NeoBundle 'vim-scripts/django.vim'
-" NeoBundle 'groenewege/vim-less'
-
 NeoBundle 'sheerun/vim-polyglot'
+NeoBundle 'pearofducks/ansible-vim'
 " Colours
-NeoBundle 'vim-scripts/summerfruit256.vim'
-NeoBundle 'chriskempson/base16-vim'
-NeoBundle 'morhetz/gruvbox'
-NeoBundle 'tomasr/molokai'
+NeoBundle 'junegunn/seoul256.vim'
 " Zen Mode
 NeoBundle 'junegunn/goyo.vim'
 
-NeoBundle 'Shutnik/jshint2.vim'
+call neobundle#end()
 
 set t_Co=256
 
@@ -76,6 +65,7 @@ set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=*.pyc
 set wildignore+=*.so,*.swp,*.zip,*/.Trash/**,*.pdf,*.dmg,*/Library/**,*/.rbenv/**
 set wildignore+=*/.nx/**,*.app
+set wildignore+=*/target/**
 
 syntax enable " highlighting
 set autoread " auto load changed files
@@ -122,8 +112,7 @@ if has('gui_running')
 endif
 
 set background=dark
-
-colorscheme gruvbox
+colo seoul256
 
 """""""""""""""
 """ Keymaps
@@ -181,4 +170,4 @@ let NERDTreeIgnore = ['\.pyc$', '_site']
 let g:airline_right_sep=''
 let g:airline_left_sep=''
 let g:airline_fugitive_prefix = ''
-let g:airline_theme = 'light'
+
